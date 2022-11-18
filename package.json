@@ -1,0 +1,36 @@
+{
+  "name": "ssh-kalibox",
+  "version": "1.0.0",
+  "description": "Kali Linux Minimal Image with NodeJs support ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "client":"ts-node src/ws.client.ts",
+    "kb:build": "ts-node src/docker.ts build",
+    "kb:run": "ts-node src/docker.ts run",
+    "tty": "ts-node src/ssh.terminal.ts",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node ./build/wss.server.js"
+  },
+  "keywords": [
+    "kali",
+    "ssh",
+    "node",
+    "wss",
+    "ws"
+  ],
+  "author": "Doth-J",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "nodemon": "^2.0.20",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "node-ssh": "^13.0.0",
+    "socket.io": "^4.5.3",
+    "socket.io-client": "^4.5.3"
+  }
+}

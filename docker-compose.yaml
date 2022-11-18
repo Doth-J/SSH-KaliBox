@@ -1,0 +1,17 @@
+version: "3.9"
+
+name: KaliBoxNet
+
+services:
+
+  kalibox:
+    container_name: KaliBox
+    build: ./kalibox
+    ports:
+     - "4000:22"
+
+  nodeproxy:
+    container_name: NodeJs-WSSProxy
+    build: .
+    ports:
+      - "3000:3000"
