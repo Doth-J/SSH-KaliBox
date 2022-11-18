@@ -64,8 +64,13 @@ To connect to your fresh KaliBox container you can use one of the following meth
    > npm run client
    ```
 
-## Container Configuration :shield:
-Once you are connected to KaliBox be sure to escalate to root and change the configurations of *init.sh* in the container's **/box** directory. Here's an example how to change the root password and persist it through container restarts:
+## Building the KaliBoxNet :package:
+You can use *docker compose* to build a stack with 1 KaliBox and 1 WSS Proxy in the same network and interact with them using the terminal and WS client scripts respectively. Execute the following command inside the project directory to start the network:
+```
+docker compose up
+```  
+## KaliBox Configuration :shield:
+Once you are connected to KaliBox be sure to change the initial configurations of *init.sh* in the container's **/box** directory. Here's an example how to change the root password and persist it through container restarts:
 ```
 > player@<CONTAINER-ID>:~$ su root
 > Password:<ROOT-PASSWORD>

@@ -4,15 +4,15 @@ const ssh = new NodeSSH()
 
 // TERMINAL CONFIGURATION HERE
 let sshConfig = {
-    host: '127.0.0.1',
+    host: 'localhost',
+    port: 4000,
     username: 'player',
-    password: 'kali',
-    port: 4000
+    password: 'kali'
 }
 
 const connect = async () => {
     
-    console.log("Connecting to",sshConfig.host+":"+sshConfig.port);
+    console.log("[>]","Connecting to",sshConfig.host+":"+sshConfig.port);
     await ssh.connect(sshConfig);
     const shellStream = await ssh.requestShell();
 
@@ -30,5 +30,5 @@ const connect = async () => {
 
 connect()
 .catch((err)=>{
-    console.log("# Error",err);
+    console.log("[#]","Error",err);
 })

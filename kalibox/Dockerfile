@@ -5,7 +5,7 @@ FROM kalilinux/kali-rolling
 RUN apt -y update && DEBIAN_FRONTEND=noninteractive apt -y dist-upgrade && apt -y autoremove && apt clean
 
 # Common and useful tools
-RUN apt -y install curl wget git net-tools whois pciutils ssh nano
+RUN apt -y install curl wget git net-tools traceroute pciutils ssh nano
 
 WORKDIR /box
 COPY init.sh /box/init.sh

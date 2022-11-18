@@ -1,18 +1,18 @@
 import { SocketToProxy,ProxyToSocket, sshConfig } from "./wss.services";
 import {io, Socket} from "socket.io-client";
 
-const proxyPath = "http://localhost:3000";
+const proxyPath = "ws://localhost:3000";
 const socket: Socket<ProxyToSocket,SocketToProxy> = io(proxyPath, {reconnectionDelay:5000});
 
 const config:sshConfig = {
+    host:"KaliBox",
+    port: 22,
     username:"player",
-    password:"kali",
-    host:"127.0.0.1",
-    port: 4000
+    password:"kali"
 }
 
 socket.on('connect',()=>{
-
+    console.log("[>]","Connecting to",config.host+":"+config.port);
     socket.emit('init',config);
     const stdin = process.openStdin();
     stdin.addListener("data",(data:Buffer)=>{
@@ -21,7 +21,7 @@ socket.on('connect',()=>{
 })
 
 socket.on('disconnect',()=>{
-    console.log("[*]","Trying to disconnect...")
+    console.log("[*]","Trying to reconnect...")
 })
 
 socket.on('tunnel',(data)=>{

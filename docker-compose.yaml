@@ -1,6 +1,6 @@
 version: "3.9"
 
-name: LocalBoxNet
+name: kaliboxnet
 
 services:
 
@@ -14,6 +14,8 @@ services:
   nodeproxy:
     container_name: WSSProxy
     build: .
+    links:
+      - "kalibox:kali"
     ports:
       - "3000:3000"
     environment:

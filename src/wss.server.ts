@@ -21,7 +21,7 @@ io.on('connection',(socket)=>{
             password: conf.password,
             port: conf.port
         }
-        console.log("[*]","Trying to connect to", config.host+":"+config.port);
+        console.log("[>]","Trying to connect to", config.host+":"+config.port);
         
         try{
             await ssh.connect(config);
@@ -48,4 +48,4 @@ io.on('connection',(socket)=>{
 
 const port = process.env.PORT ? parseInt(process.env.PORT) : 3000
 io.listen(port)
-console.log("[@] Server started at",port);
+console.log("[*] Server started at",port);

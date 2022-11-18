@@ -63,18 +63,24 @@ curl -fsSL https://deb.nodesource.com/setup_19.x | bash - && sudo apt-get instal
 # - - - - - - - - - -
 ### *** Tools Config ***
 ### Remove comment on commands to enable Tool installation 
-### Install Netcat tool in the Box (Network Scanning)
-# apt -y install netcat-traditional
 ### Install Nmap tool in the Box (Network Scanning)
 apt -y install nmap
+### Install Scapy tool in the Box (Network Scanning) {Requires Python}
+# pip install --pre scapy[basic]
+### Install Netcat tool in the Box (Network Scanning)
+# apt -y install netcat-traditional
+### Install Ettercap in the Box (Man-in-the-Middle)
+# apt -y install ettercap-common
+### Install Bettercap in the Box (Man-in-the-Middle)
+# apt -y install bettercap
+### Install Medusa tool in the Box (Brute Force)
+# apt -y install medusa
 ### Install Hashcat tool in the Box (Password Cracking)
 # apt -y install hashcat
 ### Install John the Riper in the Box (Password Cracking)
 #apt -y install john
 ### Install sqlmap in the Box (SQL Injection)
 # apt -y install sqlmap
-### Install autopsy in the Box (Forensic Browser)
-# apt -y install autopsy
 # - - - - - - - - - -
 
 # - - - - - - - - - -
