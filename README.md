@@ -1,4 +1,4 @@
-# SSH KaliBox :milky_way:
+# **SSH KaliBox** :toolbox:
 This project builds a minimal Kali Linux Docker Image with basic networkings tools and SSH support. The KaliBox base image can then be expanded by configuring various tools and plugins in the *init.sh* script.
 
 ## Configure the Image :gear:
