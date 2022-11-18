@@ -48,7 +48,6 @@ To connect to your fresh KaliBox container you can use one of the following meth
     > ssh -p <HOST-PORT> player@localhost 
     > player@localhost's password: <PLAYER-PASSWORD>
    ```
-   
    :warning: If there is an entry for `[localhost]:<HOST-PORT>`  inside */.ssh/known_hosts* go ahead and delete it, if you don't you will get a warning that the remote host identification has changed and you won't be allowed to connect. This happens because everytime the container restarts, it generates new SSH key pairs.
 
 2. `NodeJs Terminal`: Inside the [terminal](src/ssh.terminal.ts) specify the correct **host**, **port** and **credentials** in the ***config*** object.You can then execute the following command inside the project directory to open a virtual ssh terminal into KaliBox:
@@ -72,7 +71,7 @@ You can use *docker compose* to build a network stack with KaliBox and a WSS Pro
 docker compose up
 ```  
 ## KaliBox Configuration :shield:
-Once you are connected to KaliBox be sure to change the initial configurations of *init.sh* in the container's **/box** directory. Here's an example how to change the root password and persist it through container restarts:
+Once you are connected to KaliBox be sure to change the initial configurations of *init.sh* in the container's **/box** directory. Here's an example how to change the root password, persist it through container restarts and disable ssh key generation:
 ```
 > player@<CONTAINER-ID>:~$ su root
 > Password:<ROOT-PASSWORD>
@@ -88,5 +87,10 @@ apt-get update
 ### Remove comment on commands to enable Access configurations 
 ### Change root password
 # echo "root:$1" | chpasswd <-- COMMENT OUT THIS TO PERSIST LATEST ROOT PASS
-...
+.
+.
+### Generate new SSH keys
+# dpkg-reconfigure openssh-server <-- COMMENT OUT THIS TO DISABLE SSH KEYGEN
+.
+.
 ```
