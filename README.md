@@ -8,10 +8,14 @@ Before building the KaliBox image, the configuration can be done by changing the
 - `Language Config`: Configure Language support for the image.
 - `Tools Config`: Configure and extend Kali Linux Tools.
 
-## Build the Image using NodeJs :zap:
-After cloning the repository, install the project dependencies and execute the following script inside the project directory to build the image:
+## Install NodeJs dependencies :zap:
+If you are going to use NodeJs to build and run the KaliBox image, be sure to install the project's dependencies after cloning the repository:
 ```
-npm install
+npm install 
+```
+## Build the Image using NodeJs :zap:
+Execute the following script inside the project directory to build the image:
+```
 npm run kb:build
 ``` 
 ## Run the Image using NodeJs :zap:
