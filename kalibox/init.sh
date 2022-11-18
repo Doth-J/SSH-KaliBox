@@ -79,7 +79,7 @@ apt -y install nmap
 
 # - - - - - - - - - -
 ## *** Keep Alive Config ***
-echo 'KaliBox initialized, happy hacking :) !'
+echo 'KaliBox initialized, have fun hacking :)'
 ## Keep Kalibox running after init.sh
 tail -f /dev/null
 # - - - - - - - - - -

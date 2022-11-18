@@ -8,7 +8,7 @@ const config:sshConfig = {
     username:"player",
     password:"kali",
     host:"127.0.0.1",
-    port: 22
+    port: 4000
 }
 
 socket.on('connect',()=>{
