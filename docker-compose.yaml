@@ -1,6 +1,6 @@
 version: "3.9"
 
-name: KaliBoxNet
+name: LocalBoxNet
 
 services:
 
@@ -9,9 +9,12 @@ services:
     build: ./kalibox
     ports:
      - "4000:22"
+    entrypoint: "/box/init.sh toor kali"
 
   nodeproxy:
-    container_name: NodeJs-WSSProxy
+    container_name: WSSProxy
     build: .
     ports:
       - "3000:3000"
+    environment:
+      - PORT=3000
