@@ -1,15 +1,6 @@
-# Node SSH KaliBox
+# Node SSH KaliBox :rabbit:
 This project builds a minimal Kali Linux Docker Image with basic networkings tools and SSH support. The KaliBox base image can then be expanded by configuring various tools and plugins in the *init.sh* script.
-```
-  ___  __    ________  ___       ___  ________  ________     ___    ___ 
- |\  \|\  \ |\   __  \|\  \     |\  \|\   __  \|\   __  \   |\  \  /  /|
- \ \  \/  /|\ \  \|\  \ \  \    \ \  \ \  \|\ /\ \  \|\  \  \ \  \/  / /
-  \ \   ___  \ \   __  \ \  \    \ \  \ \   __  \ \  \\\  \  \ \    / / 
-   \ \  \\ \  \ \  \ \  \ \  \____\ \  \ \  \|\  \ \  \\\  \  /     \/  
-    \ \__\\ \__\ \__\ \__\ \_______\ \__\ \_______\ \_______\/  /\   \  
-     \|__| \|__|\|__|\|__|\|_______|\|__|\|_______|\|_______/__/ /\ __\ 
-                                  Follow the white rabbit   |__|/ \|__|                                                                     
-```
+
 ## Configure the Image
 Before building the KaliBox image, the configuration can be done by changing the comments inside the init.sh script in the kalibox directory:
 - `Access Config`: Configure passwords and create new players.
