@@ -65,7 +65,7 @@ To connect to your fresh KaliBox container you can use one of the following meth
    ```
 
 ## Building the KaliBoxNet :package:
-You can use *docker compose* to build a stack with 1 KaliBox and 1 WSS Proxy in the same network and interact with them using the terminal and WS client scripts respectively. Execute the following command inside the project directory to start the network:
+You can use *docker compose* to build a network stack with KaliBox and a WSS Proxy in the same network and interact with them through the terminal and WS client scripts respectively. Execute the following command inside the project directory to start the network:
 ```
 docker compose up
 ```  
