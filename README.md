@@ -8,17 +8,15 @@ Before building the KaliBox image, the configuration can be done by changing the
 - `Language Config`: Configure Language support for the image.
 - `Tools Config`: Configure and extend Kali Linux Tools.
 
-## Install NodeJs dependencies :zap:
+## Build and Run the Image using NodeJs :zap:
 If you are going to use NodeJs to build and run the KaliBox image, be sure to install the project's dependencies after cloning the repository:
 ```
 npm install 
 ```
-## Build the Image using NodeJs :zap:
 Execute the following script inside the project directory to build the image:
 ```
 npm run kb:build
 ``` 
-## Run the Image using NodeJs :zap:
 Once you build the image you can run it with the following script:
 ```
 npm run kp:run <HOST-PORT> <ROOT-PASSWORD> <PLAYER-PASSWORD>
@@ -26,12 +24,11 @@ npm run kp:run <HOST-PORT> <ROOT-PASSWORD> <PLAYER-PASSWORD>
 - `<HOST-PORT>`: [**number**] Define the host port for the Image to bind SSH service. 
 - `<ROOT-PASSWORD>`: [**string**] Define the root password for the Image. 
 - `<PLAYER-PASSWORD>`: [**string**] Define the player password for the Image. 
-## Build the Image using Docker :whale:
+## Build and Run the Image using Docker :whale:
 After cloning the repository, execute the following command inside the project directory to build the image:
 ```
 docker build -t kalibox ./kalibox
 ```
-## Run the Image using Docker :whale:
 Once you build the image you can run it using:
 ```
 docker run -d -p <HOST-PORT>:22 kalibox <ROOT-PASSWORD> <PLAYER-PASSWORD> 
