@@ -54,6 +54,7 @@ io.on('connection',(socket)=>{
     }) 
 })
 
+// SPECIFY THE WSS PROXY SERVER PORT HERE
 const port = process.env.PORT ? parseInt(process.env.PORT) : 3000
 io.listen(port)
 console.log("[*] Server started at",port);
