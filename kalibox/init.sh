@@ -108,7 +108,7 @@ apt -y install nmap
 # - - - - - - - - - -
 ## *** Keep Alive Config ***
 END_TIME=$(date +%s)
-echo "Initialized in $(($END_TIME - $START_TIME))"
+echo "Initialized in $(($END_TIME - $START_TIME)) seconds"
 echo 'KaliBox ready, have fun hacking :)'
 ## Keep Kalibox running after init.sh
 tail -f /dev/null
