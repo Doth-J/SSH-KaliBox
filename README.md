@@ -58,7 +58,7 @@ To connect to your fresh KaliBox container you can use one of the following meth
    ```   
 3. `Socket.io Server`: For the WSS Proxy server you can specify the **port** of the server inside the [server](src/wss.server.ts) file (default: **3000**), then inside the project directory execute the following script:
    ```   
-   > npm run dev <-- Requires dev dependencies installed
+   > npm run dev
    or
    > npm run start
    ```
