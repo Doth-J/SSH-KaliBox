@@ -50,7 +50,7 @@ To connect to your fresh KaliBox container you can use one of the following meth
     > ssh -p <HOST-PORT> player@localhost 
     > player@localhost's password: <PLAYER-PASSWORD>
    ```
-   :warning: If there is an entry for `[localhost]:<HOST-PORT>`  inside */.ssh/known_hosts* go ahead and delete it, if you don't you will get a warning that the remote host identification has changed and you won't be allowed to connect. This happens because everytime the container restarts, it generates new SSH key pairs.
+   :warning: If there is an entry for `[localhost]:<HOST-PORT>`  inside */.ssh/known_hosts* go ahead and delete it, if you don't you will get a warning that the remote host identification has changed and you won't be allowed to connect. This happens because everytime the container restarts, unless reconfigured, it generates new SSH key pairs.
 
 2. `NodeJs Terminal`: Inside the [terminal](src/ssh.terminal.ts) specify the correct **host**, **port** and **credentials** in the ***config*** object.You can then execute the following command inside the project directory to open a virtual ssh terminal into KaliBox:
    ```   
