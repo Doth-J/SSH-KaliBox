@@ -1,7 +1,9 @@
 #!/bin/bash
 START_TIME=$(date +%s)
+
 # - - - - - - - - - -
 ### *** Access Config ***
+echo "[*] Access Configuration Setup"
 ### Remove comment on commands to enable Access configurations
 ### Change root password
 echo "root:$1" | chpasswd && echo "Setting root pass to: $1"
@@ -13,6 +15,7 @@ echo "player:$2" | chpasswd && echo "Setting player pass to: $2"
 
 # - - - - - - - - - -
 ### *** SSH Config ***
+echo "[*] SSH Configuration Setup"
 ### Remove comment on commands to enable SSH configurations 
 ### Configure Message of the Day
 echo ' 
@@ -43,8 +46,8 @@ service --status-all
 # - - - - - - - - - -
 
 # - - - - - - - - - -
-echo "[*] Language Support Installations"
 ### *** Language Config ***
+echo "[*] Language Configuration Setup"
 ### System wide check for new updates 
 apt-get update
 ### Remove comment on commands to enable Language support
@@ -67,8 +70,8 @@ curl -fsSL https://deb.nodesource.com/setup_19.x | bash - && sudo apt-get instal
 # - - - - - - - - - -
 
 # - - - - - - - - - -
-echo "[*] Tool Installations"
 ### *** Tools Config ***
+echo "[*] Tool Configuration Setup"
 ### Remove comment on commands to enable Tool installation 
 # *
 ### Install Nmap tool in the Box (Network Scanning)
