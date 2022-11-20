@@ -23,7 +23,7 @@ echo '
    \ \  \\ \  \ \  \ \  \ \  \____\ \  \ \  \|\  \ \  \\\  \  /     \/  
     \ \__\\ \__\ \__\ \__\ \_______\ \__\ \_______\ \_______\/  /\   \  
      \|__| \|__|\|__|\|__|\|_______|\|__|\|_______|\|_______/__/ /\ __\ 
-                                  Follow the white rabbit   |__|/ \|__|
+                                  Follow the white rabbit   |__|/ \|__|  
                                                                       ' > /etc/motd
 ### Configure SSH to run persistently
 update-rc.d -f ssh remove
@@ -43,6 +43,7 @@ service --status-all
 # - - - - - - - - - -
 
 # - - - - - - - - - -
+echo "[*] Language Support Installations"
 ### *** Language Config ***
 ### System wide check for new updates 
 apt-get update
@@ -66,6 +67,7 @@ curl -fsSL https://deb.nodesource.com/setup_19.x | bash - && sudo apt-get instal
 # - - - - - - - - - -
 
 # - - - - - - - - - -
+echo "[*] Tool Installations"
 ### *** Tools Config ***
 ### Remove comment on commands to enable Tool installation 
 # *
@@ -108,6 +110,16 @@ apt -y install nmap
 # - - - - - - - - - -
 ## *** Keep Alive Config ***
 END_TIME=$(date +%s)
+echo ' 
+ ___  __    ________  ___       ___  ________  ________     ___    ___ ___    
+|\  \|\  \ |\   __  \|\  \     |\  \|\   __  \|\   __  \   |\  \  /  /|\  \   
+\ \  \/  /|\ \  \|\  \ \  \    \ \  \ \  \|\ /\ \  \|\  \  \ \  \/  / | \  \  
+ \ \   ___  \ \   __  \ \  \    \ \  \ \   __  \ \  \\\  \  \ \    / / \ \  \ 
+  \ \  \\ \  \ \  \ \  \ \  \____\ \  \ \  \|\  \ \  \\\  \  /     \/   \/  /|
+   \ \__\\ \__\ \__\ \__\ \_______\ \__\ \_______\ \_______\/  /\   \   /  // 
+    \|__| \|__|\|__|\|__|\|_______|\|__|\|_______|\|_______/__/ /\ __\ /_ //  
+                                 Follow the white rabbit   |__|/ \|__||__|/   
+                                                                          ' > /etc/motd
 echo "Initialized in $(($END_TIME - $START_TIME)) seconds"
 echo 'KaliBox ready, have fun hacking :)'
 ## Keep Kalibox running after init.sh
