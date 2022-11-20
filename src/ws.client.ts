@@ -16,7 +16,7 @@ socket.on('connect',()=>{
     socket.emit('init',config);
     const stdin = process.openStdin();
     stdin.addListener("data",(data:Buffer)=>{
-        socket.emit('command',data);
+        socket.emit('command',data.toString());
     })
 })
 

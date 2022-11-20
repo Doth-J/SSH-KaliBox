@@ -26,6 +26,9 @@ const connect = async () => {
     shellStream.stderr.on("data", (data:Buffer) => {
       process.stdout.write(data.toString());
     });
+    shellStream.on('close',()=>{
+      process.exit();
+    })
 }
 
 connect()

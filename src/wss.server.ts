@@ -2,8 +2,13 @@ import { Server } from "socket.io";
 import { NodeSSH } from "node-ssh";
 import { SocketToProxy,ProxyToSocket, sshConfig } from "./wss.services";
 
-const io = new Server<SocketToProxy,ProxyToSocket>();
 const ssh = new NodeSSH();
+const io = new Server<SocketToProxy,ProxyToSocket>({
+    cors:{
+        origin:"http://localhost:3001",
+        methods:["GET","POST"]
+    }
+});
 
 io.on('connection',(socket)=>{
 
@@ -27,17 +32,20 @@ io.on('connection',(socket)=>{
             await ssh.connect(config);
             const shellStream = await ssh.requestShell();
             console.log("[!]","Socket connect to", config.host+":"+config.port);
-            socket.on('command',(data:Buffer)=>{
-                shellStream.write(data.toString());
+            socket.on('command',(data:string)=>{
+                console.log(data.toString());
+                shellStream.write(data);
             })
             socket.on('disconnect',()=>{
                 shellStream.write("exit");
             })
             shellStream.on("data",(data:Buffer)=>{
                 socket.emit("tunnel",data.toString());
+                console.log(data.toString());
             })
             shellStream.stderr.on('data',(err:Buffer)=>{
                 socket.emit("error",err.toString());
+                console.log(err.toString());
             })
         }catch(err:any){
             socket.emit("error",err.toString());

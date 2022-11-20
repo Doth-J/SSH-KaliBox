@@ -1,12 +1,11 @@
 interface ProxyToSocket{
-    destroyed: () => void; 
     tunnel: (data:string) => void;
     error: (err:string) => void;
 }
 
 interface SocketToProxy{
     init: (conf:sshConfig) => void;
-    command: (data:Buffer) => void;
+    command: (data:string) => void;
 }
 
 type sshConfig = {
