@@ -40,6 +40,11 @@ docker run -d -p <HOST-PORT>:22 kalibox <ROOT-PASSWORD> <PLAYER-PASSWORD>
 - `<ROOT-PASSWORD>`: [**string**] Define the root password for the Image. 
 - `<PLAYER-PASSWORD>`: [**string**] Define the player password for the Image. 
   
+## Building the KaliBox Network :package:
+You can use *docker compose* to build a network stack with KaliBox and a WSS Proxy in the same network and interact with them through the terminal and WS client scripts respectively. Execute the following command inside the project directory to start the network:
+```
+docker compose up
+```  
 ## Connecting to KaliBox :dragon:
 To connect to your fresh KaliBox container you can use one of the following methods:
 
@@ -65,11 +70,6 @@ To connect to your fresh KaliBox container you can use one of the following meth
    > npm run client
    ```
 
-## Building the KaliBox Network :package:
-You can use *docker compose* to build a network stack with KaliBox and a WSS Proxy in the same network and interact with them through the terminal and WS client scripts respectively. Execute the following command inside the project directory to start the network:
-```
-docker compose up
-```  
 ## KaliBox Configuration :shield:
 Once you are connected to KaliBox be sure to change the initial configurations of *init.sh* in the container's **/box** directory. Here's an example how to change the root password, persist it through container restarts and disable ssh key generation:
 ```
