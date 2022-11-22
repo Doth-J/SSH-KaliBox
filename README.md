@@ -84,6 +84,7 @@ apt-get update
 
 # - - - - - - - - - -
 ### *** Access Config ***
+echo "[*] Access Configuration Setup"
 ### Remove comment on commands to enable Access configurations 
 ### Change root password
 # echo "root:$1" | chpasswd <-- COMMENT OUT THIS TO PERSIST LATEST ROOT PASS
