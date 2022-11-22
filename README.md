@@ -47,8 +47,8 @@ To connect to your fresh KaliBox container you can use one of the following meth
 
 1. `Command Prompt`: Open a command prompt and enter the following command:
    ```console
-    > ssh -p <HOST-PORT> player@localhost 
-    > player@localhost's password: <PLAYER-PASSWORD>
+    ssh -p <HOST-PORT> player@localhost 
+    player@localhost's password: <PLAYER-PASSWORD>
    ```
    :warning: If there is an entry for `[localhost]:<HOST-PORT>`  inside */.ssh/known_hosts* go ahead and delete it, if you don't you will get a warning that the remote host identification has changed and you won't be allowed to connect. This happens because everytime the container restarts, unless reconfigured, it generates new SSH key pairs.
 
@@ -58,25 +58,25 @@ To connect to your fresh KaliBox container you can use one of the following meth
    ```   
 3. `Socket.io Server`: For the WSS Proxy server you can specify the **port** of the server inside the [server](src/wss.server.ts) file (default: **3000**), then inside the project directory execute the following script:
    ```console   
-   > npm run dev
+   npm run dev
    ```
    You can build into JS and run the WSS Proxy with the following command:
    ```console
-   > npm run start
+   npm run start
    ```
    After ther server has started you can the use the WS client inside the [client](src/ws.client.ts) file to get an interactive shell, by executing the following script:
    ```console
-   > npm run client
+   npm run client
    ```
 
 ## KaliBox Configuration :shield:
 Once you are connected to KaliBox be sure to change the initial configurations of *init.sh* in the container's **/box** directory. Here's an example how to change the root password, persist it through container restarts and disable ssh key generation:
 ```console
-> player@<CONTAINER-ID>:~$ su root
-> Password:<ROOT-PASSWORD>
-> root@<CONTAINER-ID>:~$[/home/player] echo "root:<NEW-PASSWORD>" | chpasswd
-> root@<CONTAINER-ID>:~$[/home/player] cd /box 
-> root@<CONTAINER-ID>:~$[/box] nano init.sh 
+player@<CONTAINER-ID>:~$ su root
+Password:<ROOT-PASSWORD>
+root@<CONTAINER-ID>:~$[/home/player] echo "root:<NEW-PASSWORD>" | chpasswd
+root@<CONTAINER-ID>:~$[/home/player] cd /box 
+root@<CONTAINER-ID>:~$[/box] nano init.sh 
 ```
 ```bash
 #!/bin/bash
