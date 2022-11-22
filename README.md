@@ -54,7 +54,7 @@ To connect to your fresh KaliBox container you can use one of the following meth
 
 2. `NodeJs Terminal`: Inside the [terminal](src/ssh.terminal.ts) specify the correct **host**, **port** and **credentials** in the ***config*** object.You can then execute the following command inside the project directory to open a virtual ssh terminal into KaliBox:
    ```console  
-   > npm run tty
+   npm run tty
    ```   
 3. `Socket.io Server`: For the WSS Proxy server you can specify the **port** of the server inside the [server](src/wss.server.ts) file (default: **3000**), then inside the project directory execute the following script:
    ```console   
