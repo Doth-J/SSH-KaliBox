@@ -39,7 +39,7 @@ docker run -d -p <HOST-PORT>:22 kalibox <ROOT-PASSWORD> <PLAYER-PASSWORD>
   
 ## Building the KaliBox Network :package:
 You can use *docker compose* to build a network stack with KaliBox and a WSS Proxy in the same network and interact with them through the terminal and WS client scripts respectively. Execute the following command inside the project directory to start the network:
-```shell
+```docker
 docker compose up
 ```  
 ## Connecting to KaliBox :dragon:
