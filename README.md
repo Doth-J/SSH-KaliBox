@@ -1,8 +1,8 @@
 # **SSH - KaliBox** :toolbox: 
 This project builds a minimal Kali Linux Docker Image with basic networking tools and SSH support. The KaliBox base image can then be expanded by configuring various tools and plugins in the *init.sh* script.
 
-## Configure the Image :gear:
-Before building the KaliBox image, the configuration can be done by changing the comments inside the [init.sh](./kalibox/init.sh) script in the kalibox directory:
+## Configure the Init Script :gear:
+Before building the KaliBox image, you can configure the [init.sh](./kalibox/init.sh) script by changing the comments inside or adding your own configurations:
 - `Access Config`: Configure passwords and create new players.
 - `SSH Config`: Configure SSH to backup default keys, generate new keys and start the ssh service.
 - `Language Config`: Configure Language support for the image.
@@ -43,7 +43,7 @@ You can use *docker compose* to build a network stack with KaliBox and a WSS Pro
 docker compose up
 ```  
 ## Connecting to KaliBox :dragon:
-To connect to your fresh KaliBox container you can use one of the following methods:
+To connect to KaliBox container, use one of the following methods:
 
 1. `Command Prompt`: Open a command prompt and enter the following command:
    ```console
