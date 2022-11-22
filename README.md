@@ -1,5 +1,5 @@
 # **SSH KaliBox** :toolbox:
-This project builds a minimal Kali Linux Docker Image with basic networkings tools and SSH support. The KaliBox base image can then be expanded by configuring various tools and plugins in the *init.sh* script.
+This project builds a minimal Kali Linux Docker Image with basic networking tools and SSH support. The KaliBox base image can then be expanded by configuring various tools and plugins in the *init.sh* script.
 
 ## Configure the Image :gear:
 Before building the KaliBox image, the configuration can be done by changing the comments inside the [init.sh](./kalibox/init.sh) script in the kalibox directory:
