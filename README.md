@@ -60,7 +60,7 @@ To connect to your fresh KaliBox container you can use one of the following meth
    ```console   
    npm run dev
    ```
-   You can build into JS and run the WSS Proxy with the following command:
+   You can build and run the WSS Proxy with the following command:
    ```console
    npm run start
    ```
