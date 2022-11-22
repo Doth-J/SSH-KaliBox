@@ -69,7 +69,7 @@ To connect to your fresh KaliBox container you can use one of the following meth
    npm run client
    ```
 
-## KaliBox Configuration :shield:
+## KaliBox Configuration :wrench:
 Once you are connected to KaliBox be sure to change the initial configurations of *init.sh* in the container's **/box** directory. Here's an example how to change the root password, persist it through container restarts and disable ssh key generation:
 ```console
 player@<CONTAINER-ID>:~$ su root
