@@ -48,7 +48,7 @@ To connect to your fresh KaliBox container you can use one of the following meth
 1. `Command Prompt`: Open a command prompt and enter the following command:
    ```console
     ssh -p <HOST-PORT> player@localhost 
-    player@localhost's password: <PLAYER-PASSWORD>
+    Password: <PLAYER-PASSWORD>
    ```
    :warning: If there is an entry for `[localhost]:<HOST-PORT>`  inside */.ssh/known_hosts* go ahead and delete it, if you don't you will get a warning that the remote host identification has changed and you won't be allowed to connect. This happens because everytime the container restarts, unless reconfigured, it generates new SSH key pairs.
 
