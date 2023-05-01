@@ -7,7 +7,8 @@
     "dev": "nodemon",
     "client":"ts-node src/ws.client.ts",
     "kb:build": "ts-node src/docker.ts build",
-    "kb:run": "ts-node src/docker.ts run",
+    "docker:build": "docker build -t kalibox ./kalibox",
+    "docker:run": "ts-node src/docker.ts",
     "tty": "ts-node src/ssh.terminal.ts",
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node ./build/wss.server.js"
