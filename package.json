@@ -2,7 +2,13 @@
   "name": "ssh-kalibox",
   "version": "1.0.0",
   "description": "Kali Linux Minimal Image with NodeJs support ",
-  "main": "index.js",
+  "main": "index.js",  
+  "license": "Apache-2",
+  "homepage": "https://github.com/Doth-J/SSH-Kalibox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Doth-J/SSH-Kalibox"
+  },
   "scripts": {
     "dev": "nodemon",
     "docker:build": "docker build -t kalibox ./kalibox",
@@ -20,7 +26,6 @@
     "ws"
   ],
   "author": "Doth-J",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.9",
     "nodemon": "^2.0.20",
