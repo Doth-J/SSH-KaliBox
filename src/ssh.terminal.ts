@@ -5,7 +5,7 @@ const ssh = new NodeSSH()
 // TERMINAL CONFIGURATION HERE
 let sshConfig = {
     host: 'localhost',
-    port: 4000,
+    port: 4001,
     username: 'player',
     password: 'kali'
 }

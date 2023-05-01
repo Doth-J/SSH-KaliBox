@@ -12,7 +12,7 @@ WORKDIR /box
 COPY init.sh /box/init.sh
 
 # If you are using Windows, uncomment below
-# RUN sed -i 's/\r$//' /box/init.sh
+RUN sed -i 's/\r$//' /box/init.sh
 
 EXPOSE 22
 

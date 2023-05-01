@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
-    "client":"ts-node src/ws.client.ts",
-    "kb:build": "ts-node src/docker.ts build",
     "docker:build": "docker build -t kalibox ./kalibox",
     "docker:run": "ts-node src/docker.ts",
-    "tty": "ts-node src/ssh.terminal.ts",
+    "terminal": "ts-node src/ssh.terminal.ts",
+    "client":"ts-node src/ws.client.ts",
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node ./build/wss.server.js"
   },
