@@ -1,5 +1,6 @@
 # **SSH - KaliBox** :toolbox:
 ![KaliDragon](https://github.com/Doth-J/SSH-KaliBox/blob/master/docs/KaliBox.png); 
+
 This project builds a minimal Kali Linux Docker Image with basic networking tools and SSH support. The KaliBox base image can then be expanded by configuring various tools and plugins in the *init.sh* script.
 
 ## Configure the Init Script :gear:
